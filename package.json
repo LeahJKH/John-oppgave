@@ -2,7 +2,10 @@
   "name": "@johnb08/test-library",
   "version": "1.0.2",
   "private": false,
-  "repository": "https://github.com/JohnB08/test-library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JohnB08/test-library"
+  },
   "description": "test-library",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
@@ -21,9 +24,6 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  },
-  "publishConfig": {
-    "@johnb08:registry": "https://npm.pkg.github.com"
   },
   "type": "module"
 }
