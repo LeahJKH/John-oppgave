@@ -18,6 +18,7 @@ Hvordan teste componenten du lager:
 
              3. Etter du har kjørt de standard commandene som vite krever (cd DITT_PROSJEKTNAVN_HER og npm install) Kjør også npm install ../
                 Dette vil installere packagen fra root folderen inn i dette nye prosjektet, og du kan importere componenter fra root folderen og teste de ut i viteprosjektet.
+                Pass på når du importerer at filen blir importert fra "@johnb08/test-library" og ikke "../../src".
 
              4. Når dette er gjort, så kan du lage en pullRequest. HUSK AT VITEPROSJEKTET DU LAGER FOR Å TESTE IGJEN ER PÅ GITIGNORE.
 
