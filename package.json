@@ -21,6 +21,6 @@
     "react": "^18.2.0"
   },
   "publishConfig": {
-    "@JohnB08:registry": "https://npm.pkg.github.com"
+    "@johnb08:registry": "https://npm.pkg.github.com"
   }
 }
