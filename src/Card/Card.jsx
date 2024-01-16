@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "./card.css";
 export function TestCard({ img, title, children }) {
   return (
     <article>
