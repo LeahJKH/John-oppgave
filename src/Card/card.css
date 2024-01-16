@@ -1,0 +1,19 @@
+[data-card] {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+[data-card]:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-card-img] {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
