@@ -1,5 +1,5 @@
 {
-  "name": "@JohnB08/test-library",
+  "name": "@johnb08/test-library",
   "version": "1.0.0",
   "description": "test-library",
   "main": "dist/index.umd.js",
