@@ -1,6 +1,7 @@
 {
   "name": "@johnb08/test-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "private": false,
   "description": "test-library",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
