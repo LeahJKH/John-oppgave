@@ -26,6 +26,6 @@ Hvordan teste componenten du lager:
                 Dette vil installere packagen fra root folderen inn i dette nye prosjektet, og du kan importere componenter fra root folderen og teste de ut i viteprosjektet.
                 Pass på når du importerer at filen blir importert fra "@johnb08/test-library" og ikke "../../src".
 
-             4. Når dette er gjort, så kan du lage en pullRequest. HUSK AT VITEPROSJEKTET DU LAGER FOR Å TESTE IGJEN ER PÅ GITIGNORE.
+             4. Når dette er gjort, og du er fornøyd med hvordan komponenten fungerer, kan du lage en pullRequest. HUSK AT VITEPROSJEKTET DU LAGER FOR Å TESTE IGJEN ER PÅ GITIGNORE.
 
              5. Lykke Til.
