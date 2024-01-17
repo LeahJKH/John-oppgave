@@ -37,6 +37,8 @@ Hvordan lage et nytt component:
              Eksempel:
 
              export default {
+               StoryBook lager en folderstruktur dynamisk basert på tittelen til alle components,
+               så alle components som har "Components/..." i tittelen havner i en mappe som heter Components på storybook appen.
                title: "Components/MyReactComponent",
                component: MyReactComponent,
                parameters{
