@@ -7,11 +7,13 @@ Hvordan lage et nytt component:
              1. Lag en ny folder inni src folderen med samme navn som komponenten du vil lage. Hvis du vil lage en button kan den hete DITT_KODEHODENAVN_Button.
 
              2. Inni denne folderen lager du en index.js fil, og en komponentfil som heter det samme som mappen, f.eks DITT_KODEHODENAVN_Button.jsx
-                Og en css fil med samme navn, f.eks DITT_KODEHODENAVN_Button.css
+                Og en css fil med samme navn, f.eks DITT_KODEHODENAVN_Button.module.css
 
              3. inni index.js filen skal du kun exportere komponenten, i eksempelet over vil det se se ut som; export * from "./DITT_KODEHODENAVN_Button"
 
-             4. Lag react komponenten i jsx filen som du vil, men IKKE bruk export default, bruk bare export. Eksempel; export MinReactComponent(){return(<p>Hei</p>)}
+             4. Lag react komponenten i jsx filen som du vil. Husk å importere React i toppen av filen via import React from "react";
+             Husk også å importere css, i eksempelet over ville det sett sånn ut; import Style from "./DITT_KODEHODENAVN_Button.module.css";
+             IKKE bruk export default, bruk bare export. Eksempel; export MinReactComponent(){return(<p>Hei</p>)}
 
              5. I index.jsx i root folderen til prosjektet adder du samme linje som er lagt inn i din index.js fil.
              I eksempelet over vil det være;  export * from "./DITT_KODEHODENAVN_Button"
