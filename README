@@ -4,10 +4,10 @@ Jeg har nettopp forket denne repositorien, hva gjør jeg?
 
 Hvordan lage et nytt component:
 
-             1. Lag en ny folder inni src folderen med samme navn som komponenten du vil lage. Hvis du vil lage en button kan den hete DITT_KODEHODENAVN_Button.
+             1. Lag en ny folder inni src/stories med samme navn som komponenten du vil lage. Hvis du vil lage en button kan den hete DITT_KODEHODENAVN_Button.
 
-             2. Inni denne folderen lager du en index.js fil, og en komponentfil som heter det samme som mappen, f.eks DITT_KODEHODENAVN_Button.jsx
-                Og en css fil med samme navn, f.eks DITT_KODEHODENAVN_Button.module.css
+             2. Inni denne folderen lager du en index.js fil, og en komponentfil som heter det samme som mappen, f.eks DITT_KODEHODENAVN_Button.jsx,
+             en css fil med samme navn, f.eks DITT_KODEHODENAVN_Button.module.css, 
 
              3. inni index.js filen skal du kun exportere komponenten, i eksempelet over vil det se se ut som; export * from "./DITT_KODEHODENAVN_Button"
 
