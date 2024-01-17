@@ -1,4 +1,5 @@
-[data-card] {
+
+.card {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -9,11 +10,11 @@
   gap: 2rem;
 }
 
-[data-card]:hover {
+.card:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-[data-card-img] {
+.cardImage {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
