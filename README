@@ -46,6 +46,7 @@ Hvordan lage et nytt component:
                   layout: "centered"
                },
                taggen her bestemmer hvordan du vil lage "documentasjonen" for komponentet, autodocs gjør det automatisk.
+               Den bruker bl.a. blokk kommentaren til react komponenten din. Så da er det viktig å lage en god og utfyllende blokk kommentar.
                tags: ["autodocs"]
              }
 
