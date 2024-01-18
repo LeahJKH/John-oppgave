@@ -9,6 +9,7 @@ const preview = {
       },
     },
   },
+  args: { theme: "light" },
 };
 
 export default preview;
