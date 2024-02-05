@@ -61,18 +61,34 @@
 
             ### Export
 
-             5. I index.jsx i root folderen til prosjektet adder du samme linje som er lagt inn i din index.js fil.
+             I skriver du en export linje, hvor du exporterer ut komponenten fra jsx filen din.
              I eksempelet over vil det være;
 
             ```javascript
-             export * from "./DITT_KODEHODENAVN_Button"
+             export {MinReactComponent} from "./DITT_KODEHODENAVN_Button"
             ```
 
-             6. Siden må vi inn i .stories.js filen.
+            Dette må også legges i index.js filen i /Components/ mappen.
+
+            ```javascript
+             export {MinReactComponent} from "./DITT_KODEHODENAVN_Button/DITT_KODEHODENAVN_Button"
+            ```
+
+
+            Så må vi inn i index.jsx i src og passe på din komponent blir exportert ut fra Components her også:
+
+            ```javascript
+             export {MinReactComponent} from "./Components"
+            ```
+             Siden må vi inn i .stories.js filen.
+
+
+             ## Stories
+
              Her importerer vi først selve JSX componenten i toppen av filen, f.eks;
 
             ```javascript
-             import {MyReactComponent} from "./DITT_KODEHODENAVN_Button"
+             import {MinReactComponent} from "./DITT_KODEHODENAVN_Button"
             ```
 
              Så må du definere en export default hefra. der definerer du bl.a. hva tittel componenten skal ha i StoryBook, hvilken component denne defaulten gjelder for, og hvordan den skal rendres.
@@ -94,8 +110,6 @@
                tags: ["autodocs"]
              }
              ```
-
-             ## Stories
 
              ### Static story
              Så må du definere en "story". DVS en versjon av komponenten du vil vise. Hvis du har et statisk element som ikke har noe parameter,
