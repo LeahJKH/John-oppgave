@@ -1,7 +1,7 @@
 import { HelloWorld } from "./Hello_World";
 
 export default {
-  title: "Example/Hello_World",
+  title: "Examples/Hello_World",
   component: HelloWorld,
   parameters: {
     layout: "centered",

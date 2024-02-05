@@ -4,7 +4,7 @@ import { ExampleCard } from "./ExampleCard";
 /* Her kommer alle "default" verdiene storybook trenger for å previewe komponenten */
 export default {
   /* Dette er hvordan storybook skal organisere komponenten. Hvilken mappe skal den legges i, og hva skal den hete. */
-  title: "Example/ExampleCard",
+  title: "Examples/ExampleCard",
   /* Her er en referanse til selve react componenten.  */
   component: ExampleCard,
   /* Her kan du legge inn parametere for hvordan componenten skal bli rendret i storybook. */
@@ -14,7 +14,7 @@ export default {
   /* Her kan du legge inn forskjellige tags som beskriver kommandoer storybook må gjøre.
   "autodocs" forteller storybook at all dokumentasjon kan lages automatisk. Den gjør dette ved å hente all konteksten den finner fra komponent filen, samt denne.
   Og genererer en automatisk dokumentasjonspresentasjon fra det. Dette gjør det viktig å lage en god Blokk kommentar for react komponenten din. */
-  tags: ["autodocs"],
+  tags: [],
 };
 
 /* Her blir alle "stories" storybook trenger laget. Du kan se på de som fastsatte verdier for komponenten.
