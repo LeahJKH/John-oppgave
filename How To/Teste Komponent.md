@@ -1,0 +1,17 @@
+Hvordan teste componenten du lager:
+
+             1. Kjør i terminalen npm run build. Se at denne kjører uten error.
+
+             2. Lag et nytt prosjekt inni root via npm create vite@latest. Du kan kalle prosjektet hva som helst.
+
+             3. Add prosjektfolderen du lager til vite prosjektet til .gitignore. Hvis viteprosjektet heter DITT_PROSJEKTNAVN_HER, så skriver du /DITT_PROSJEKTNAVN_HER i .gitignore.
+
+             4. Etter du har kjørt de standard commandene som vite krever (cd DITT_PROSJEKTNAVN_HER og npm install) Kjør også npm install ../
+                Dette vil installere packagen fra root folderen inn i dette nye prosjektet, og du kan importere componenter fra root folderen og teste de ut i viteprosjektet.
+                Pass på når du importerer at filen blir importert fra "@johnb08/test-library" og ikke "../../src".
+                Gå så inn i app.css og skriv @import "../node_modules/@johnb08/test-library/dist/style.css"
+                Dette vil importere rett CSS fra komponentene dine.
+
+             5. Når dette er gjort, og du er fornøyd med hvordan komponenten fungerer, kan du lage en pullRequest. HUSK AT VITEPROSJEKTET DU LAGER FOR Å TESTE IGJEN ER PÅ GITIGNORE.
+
+             6. Lykke Til.
