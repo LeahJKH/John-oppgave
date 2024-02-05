@@ -1,12 +1,33 @@
-Hvordan lage et nytt component:
+            # Hvordan lage et nytt component:
 
-             1. Lag en ny folder inni src/stories med samme navn som komponenten du vil lage. Hvis du vil lage en button kan den hete DITT_KODEHODENAVN_Button.
 
-             2. Inni denne folderen lager du en index.js fil, og en komponentfil som heter det samme som mappen, f.eks DITT_KODEHODENAVN_Button.jsx,
+
+            ## Index:
+
+            - [Set Up](#set-up)
+              - [Foldernavn](#foldernavn)
+              - [Import](#import)
+              - [Proptypes](#proptypes)
+              - [Export](#export)
+
+            - [Stories](#stories)
+              - [Static story](#static-story)
+              - [Dynamic story](#dynamic-story)
+
+
+
+            ## Set up
+
+            ### Foldernavn
+             Lag en ny folder inni src/Components med samme navn som komponenten du vil lage. Hvis du vil lage en button kan den hete DITT_KODEHODENAVN_Button.
+
+             Inni denne folderen lager du en index.js fil, og en komponentfil som heter det samme som mappen, f.eks DITT_KODEHODENAVN_Button.jsx,
              en css fil med samme navn, f.eks DITT_KODEHODENAVN_Button.module.css, og en DITT_KODEHODENAVN_Button.stories.js(x) fil.
-             3. inni index.js filen skal du kun exportere komponenten, i eksempelet over vil det se se ut som; export * from "./DITT_KODEHODENAVN_Button"
+             inni index.js filen skal du kun exportere komponenten, i eksempelet over vil det se se ut som; export * from "./DITT_KODEHODENAVN_Button"
 
-             4. Lag react komponenten i jsx filen som du vil. Husk å importere React i toppen av filen via import React from "react";
+             ### Import
+
+             Lag react komponenten i jsx filen som du vil. Husk å importere React i toppen av filen via import React from "react";
              Husk også å importere css, i eksempelet over ville det sett sånn ut;
 
 
@@ -20,6 +41,7 @@ Hvordan lage et nytt component:
              export const MinReactComponent=()=>{return(<p>Hei</p>)}
              ```
 
+             ### Proptypes
 
              For at storybook skal bli fornøyd må vi desverre bruke proptypes. Det vil si man må definere hvilke "type" proppertiene man bruker i funksjonen er. dvs er propertien du ligger inn i componenten hvis du har noen, en string eller et tall osv osv. Det gjør man ved å først importere proptypes i starten av filen via:
 
@@ -36,6 +58,8 @@ Hvordan lage et nytt component:
                prop3: PropType.array
              }
             ```
+
+            ### Export
 
              5. I index.jsx i root folderen til prosjektet adder du samme linje som er lagt inn i din index.js fil.
              I eksempelet over vil det være;
@@ -71,6 +95,9 @@ Hvordan lage et nytt component:
              }
              ```
 
+             ## Stories
+
+             ### Static story
              Så må du definere en "story". DVS en versjon av komponenten du vil vise. Hvis du har et statisk element som ikke har noe parameter,
              kan du lage en statisk story ved å skrive:
 
@@ -79,6 +106,8 @@ Hvordan lage et nytt component:
              export const StaticStory = {}
              ```
 
+
+             ### Dynamic story
 
              men hvis funksjonen din tar i bruk parametere, definerer du en "story" med fastsatte parametere her.
 
