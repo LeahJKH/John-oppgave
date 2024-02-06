@@ -1,0 +1,33 @@
+# Hvordan publisere til NPM
+
+Denne pakken er satt til å automatisk publisere til @johnb08 namespacet.
+Dette kan endres hvis bruker vil publisere til en eget namespace.
+
+Da må du først lage en bruker hos <a href="https://www.npmjs.com/">NPM<a/>
+
+brukernavnet blir din "namespace" hos npm, hvor alle repos linker til. 
+
+Da kan du begynne å sette opp package.json, og din repo for autopublish: 
+
+                1. Gå inn i package.json og skift ut følgende:
+                            - name: skift ut "@johnb08/test-library" til din egen npm namespace og prosjektnavn, "@my-namespace/project-name"
+                            - repository.url: skift ut "https://github.com/JohnB08/test-library" med en link til ditt repo.
+                            - description: skift ut "test-library" med en beskrivelse av din repo.
+                            - version: sett gjerne version tilbake til 1.0.0, husk at før hver push til -main branch må du ha kjørt npm version patch. 
+                                        github actions oppdaterer ikke package.json filen i branchen automatisk selv om den sier det. 
+                
+                2. I .github/workflows/npm-publish.yml, gå til increment version og skift ut git config user.email og git config user.name til din egen git epost og bruker.
+
+                3. Gå til din brukerside på NPMJS, og finn Access Tokens menyen i sidebaren. 
+                    - Trykk på Generate new Token og velg Classic Token
+                    - gi token et beskrivende navn som f.eks github auto publish token. 
+                    - under select type, velg Automation.
+                    - trykk så på Generate Token.
+                
+                4. Gå inn på github repoen på github.com og trykk på settings:
+                    - Gå til secrets and variables i sidebaren, under der velg actions.
+                    - Velg New Repository Secret. 
+                    - gi den navnet NPM_TOKEN
+                    - i innhold lim in Classic Token fra NPM.
+
+                Hvis disse steps er følgt skal librariet nå autopublishe packages når noe blir pushet til main branch. For å unngå masse autopublishes og pushes kan det være lurt å gjøre endringer i en egen dev branch, og når dere er fornøyd, merge dev inn i main for å publishe flere endringer om gangen. 
