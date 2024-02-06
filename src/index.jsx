@@ -1,3 +1,3 @@
 //!! DET ER VIKTIG DU OGSÅ HER EXPORTERER ALLE KOMPONENTENE SOM VIST UNDER.
 export { HelloWorld, Button, ExampleCard } from "./Examples";
-export {} from "./Components";
+export { Bullshit } from "./Components";
