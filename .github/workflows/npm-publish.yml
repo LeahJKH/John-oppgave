@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: increment version
-        run: npm version patch
+        run: git config user.email "johnb08.kodehode@gmail.com" && git config user.name "JohnB08" && npm version patch
 
       - name: build package
         run: npm run build
