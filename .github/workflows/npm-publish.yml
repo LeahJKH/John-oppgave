@@ -1,0 +1,30 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: "npm"
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: increment version
+        run: npm version patch
+
+      - name: build package
+        run: npm run build
+
+      - name: publish build
+        run: npm publish
