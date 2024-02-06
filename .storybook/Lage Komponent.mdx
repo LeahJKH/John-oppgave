@@ -14,6 +14,10 @@
               - [Static story](#static-story)
               - [Dynamic story](#dynamic-story)
 
+            - [Bruke Storybook](#bruke-storybook)
+              - [Teste Stories](#teste-stories)
+              - [A11y Accessibility](#a11y-accessibility)
+
 
 
             ## Set up
@@ -91,7 +95,7 @@
              import {MinReactComponent} from "./DITT_KODEHODENAVN_Button"
             ```
 
-             Så må du definere en export default hefra. der definerer du bl.a. hva tittel componenten skal ha i StoryBook, hvilken component denne defaulten gjelder for, og hvordan den skal rendres.
+             Så må du definere en export default hefra som storybook bruker for å definere hvordan komponenten blir presentert i storybook layouten. Der definerer du bl.a. hvor komponenten er lokalisert i title: ,  hvilken component denne defaulten gjelder for via component: , og hvordan den skal rendres under parameters: .
 
              Eksempel:
 
@@ -143,3 +147,56 @@
              Da skal browseren åpne storybook applikasjonen, og du skal kunne se komponenten din i sidebar.
 
              Se gjerne på eksempelfilene som er lagt inn for å se mer spesifikt hvordan dette kan skrives.
+
+
+             ## Bruke Storybook
+
+             I sidebaren til storybook finner du en liste over alle mappene som er blitt definert i komponentstories.
+
+             Når du åpner folderen finner du en liste over alle komponentene som er listet i den folderen.
+
+             Hvis du der åpner din komponent, vil du finne en fil som heter Docs, samt alle stories du har definert i .stories.js filen.
+
+             Her kan du se komponenten din in action, og skifte mellom alle variablene som kan skiftes på i kontroll i bunn.
+
+             Her er det også en Accessibility tab hvor du kan skjekke om skrift og farger og screenreaders kan lese teksten din, og får forslag
+             til hva som bør endres.
+
+             ### Teste stories
+
+             Når du er inne på en story, får du en hovedframe hvor komponenten din er rendret, og en kontrolbar i bunn.
+
+             Default er den i Controls tabben.
+
+             Under Controls har du oversikt over alle parameterene komponenten din kan ta inn, og kan endre de dynamisk for å se komponenten rendret i real time med forskjellige parametere. Hvis du f.eks vil endre på hvordan en funksjon funker, eller endre bakgrunnsfargen og tekst, så kan dette gjøres her.
+
+             For eksempel hvis du går inn på "Examples/ExampleCard" og trykker på lightmode vil du se det har en Theme, en Title, en mendge med ListItems og noen Children, som i dette tilfelle er en "Examples/Button" komponent. Her ser du at alt kan endres på, du kan endre Theme og Title, legge til, endre og fjerne ListItems, du kan til og med endre på alle parameterene til "Examples/Button".
+             Du får full kontroll i hvordan komponenten ser ut og fungerer i bruk. Hvis du er kjent med figma er dette en mye mer avansert form for prototyping.
+
+             ### A11y Accessibility
+
+             Det er også en Accessibility tab tilgjengelig på kontrollbaren. Her kan du se om komponenten består en AXE test for accessibility. Den setter opp tester dynamisk basert på komponentfunksjonalitet for å passe på at du følger semantic html, at fargekontrastene er ok og at all tekst er lesbar av screenreaders.
+
+             Hvis du lager en story som ikke accessibilityregler burde gjelde for, kan du disable disse i .stories.js filen.
+
+             La oss f.eks si i komponenten vår over, så vil vi disable Color-Contrast:
+
+
+             ```javascript
+             export default {
+               title: "Components/MyReactComponent",
+               component: MyReactComponent,
+               parameters: {
+                  layout: "centered"
+                  /* Under parameters kan vi legge inn a11y parametere */
+                  a11y: {
+                    config: {
+                      rules: [{id: "color-contrast", enabled: false}]
+                    }
+                  }
+               },
+               tags: ["autodocs"]
+             }
+             ```
+
+             Da vil ikke lengre A11y skjekke komponenten vår for color contrasts under AXE testing.
