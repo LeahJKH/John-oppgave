@@ -1,0 +1,16 @@
+.VitaContain {
+display: flex;
+flex-direction: row;
+background-color: rgb(29, 29, 29);
+width: 500px;
+height: 300px;
+}
+.VitaImage {
+width: 40%;
+}
+.VitaHeading {
+color: rgb(124, 212, 212);
+}
+.VitaText {
+color: rgb(238, 233, 233);
+}
