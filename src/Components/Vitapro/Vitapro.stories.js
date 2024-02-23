@@ -5,4 +5,4 @@ export default {
     parameters: {layout:"centered"},
     tags: ["autodocs"]
 }
-export const Vitapro = {}
+export const VitaproExample = {}
