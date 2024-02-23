@@ -1,4 +1,3 @@
-
 import { Vitapro } from "./Vitapro";
 export default {
     title: "kodehodecomponents/Vitapro",
