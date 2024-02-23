@@ -1,6 +1,6 @@
 import { MikuLove } from "./MikuLove";
 export default {
-    title: "components/MikuLove",
+    title: "kodehodecomponents/MikuLove",
     component: MikuLove,
     parameters: {layout:"centered"},
     tags: ["autodocs"]
