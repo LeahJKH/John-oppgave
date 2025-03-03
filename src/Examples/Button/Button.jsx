@@ -27,7 +27,7 @@ Button.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  theme: PropTypes.string,
+  theme: PropTypes.oneOf(["light", "dark"]),
   /**
   /**
    * How large should the button be?
@@ -44,8 +44,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
   size: "medium",
   onClick: undefined,
 };

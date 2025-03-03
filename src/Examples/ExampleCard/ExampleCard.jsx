@@ -53,12 +53,12 @@ export const ExampleCard = ({ title, listItems, children, theme }) => {
 
 /* Det kan være lurt å bruke PropTypes slik at andre kan lett skjønne hva de forskjellige "props" som funksjonen tar inn er.
 Dette er som en forenklet utgave at TypeScript. */
-ExampleCard.PropTypes = {
+ExampleCard.propTypes = {
   title: PropTypes.string,
   listItems: PropTypes.arrayOf(PropTypes.string),
   /* Siden jeg ikke er sikker på hva Children kommer til å være, så setter jeg bare proptypes any her for nå. 
   etterhvert som vi vet hva som er naturlig å putte inn i dette kortet, kan children spesifiseres mer. */
   children: PropTypes.any,
   /* theme er en global variabel som alltid vil være enten "light" eller "dark". */
-  theme: PropTypes.oneOf("light", "dark"),
+  theme: PropTypes.oneOf(["light", "dark"]),
 };
