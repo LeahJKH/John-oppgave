@@ -1,0 +1,22 @@
+.Toptext {
+    color: rgb(81, 174, 174);
+}
+.bottomText {
+    font-size: 23px;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(96, 221, 221);
+}
+.MikuLoveContain {
+    width: 600px;
+    height: 200px;
+    background-color: rgb(69, 69, 69);
+    border: 3px solid rgb(52, 164, 153);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 0;
+}
+.mikuImg {
+    height: 100%;
+}
