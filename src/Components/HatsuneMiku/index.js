@@ -1,4 +1,1 @@
-export {
-    MikuLove
-}
-from"./MikuLove"
+export {HatsuneMiku} from "./HatsuneMiku"
