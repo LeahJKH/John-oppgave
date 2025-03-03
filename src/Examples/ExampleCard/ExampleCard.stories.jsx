@@ -1,5 +1,6 @@
 import { Button } from "../Button";
 import { ExampleCard } from "./ExampleCard";
+import React from "react"
 
 /* Her kommer alle "default" verdiene storybook trenger for å previewe komponenten */
 export default {

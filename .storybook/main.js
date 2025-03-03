@@ -12,13 +12,14 @@ const config = {
     "@storybook/addon-interactions",
     "@storybook/addon-mdx-gfm",
     "@storybook/addon-a11y",
+    "@chromatic-com/storybook"
   ],
+  docs: {},
   framework: {
     name: "@storybook/react-vite",
-    options: {},
-  },
-  docs: {
-    autodocs: "tag",
+    options: {
+      
+    }
   },
 };
 export default config;
