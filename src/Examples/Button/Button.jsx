@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import "./button.css";
 
 /**
- * Primary UI component for user interaction
+ * Primary button component for library
+ * @param {{theme, size, label}} args: theme = light | dark, size = small | medium | large
+ * @returns 
  */
 export const Button = ({ theme, size, label, ...props }) => {
   let mode = "";
