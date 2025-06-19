@@ -1,0 +1,1 @@
+export { LogoJL } from "./LogoJL";
